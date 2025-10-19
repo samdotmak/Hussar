@@ -2,6 +2,10 @@
 
 Hussar is a simple agentic search library that uses OpenRouter + Chroma to answer questions about text content. The system stores text in a vector database and uses an LLM to provide intelligent answers.
 
+## Hussar Workflow
+<img width="2765" height="1684" alt="Hussar Diagram" src="https://github.com/user-attachments/assets/3e22a1c3-5a85-43a7-bfb2-c81faa916418" />
+
+
 ## ⚠️ Work in Progress
 
 **IMPORTANT**: This library is currently under active development. Components are being built incrementally, starting with the core search tools and ending with the LLM agent integration. The current implementation is a minimal working version for testing and development purposes.
