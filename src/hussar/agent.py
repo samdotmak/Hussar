@@ -5,7 +5,6 @@ This is the main class that users will interact with.
 """
 
 import os
-import requests
 from typing import Optional, List, Dict, Any
 from pathlib import Path
 
@@ -31,9 +30,9 @@ class Hussar:
         self.openrouter_api_key = openrouter_api_key or os.getenv("HUSSAR_OPENROUTER_API_KEY")
         self.collection_name = collection_name
         
-        # Use user's home directory by default
+        # Use visible hussar directory in user's home directory
         if storage_path is None:
-            storage_path = str(Path.home() / ".hussar" / "vectorstore")
+            storage_path = str(Path.home() / "hussar" / "vectorstore")
         self.storage_path = storage_path
         
         # Use local persistent storage
@@ -45,7 +44,6 @@ class Hussar:
         except:
             self.collection = self.client.create_collection(name=collection_name)
     
-        print(f"Initialized Hussar with collection: {collection_name}")
     
     def ingest(self, text: str):
         print(f"hello world!")
